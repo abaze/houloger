@@ -1,0 +1,145 @@
+@import '~assets/scss/vars/vars';
+
+/* PAGE TRANSIITION */
+
+$t-duration: 800ms;
+$t-delay: 80ms;
+
+.balayage-enter-active,
+.balayage-leave-active {
+  transition-duration: $t-duration;
+
+  &::before,
+  &::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    display: block;
+    height: 100vh;
+    transition-property: transform;
+    transition-timing-function: cubic-bezier(0, 1.07, 0, 0.97);
+    clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
+  }
+
+  &::before {
+    background-color: #294b81;
+    left: 0;
+    width: 115vw;
+    transform: translateX(-100%);
+    z-index: 20000;
+  }
+  &::after {
+    background-color: #25416d;
+    left: 0;
+    width: 115vw;
+    transform: translateX(-100%);
+    z-index: 10000;
+  }
+}
+
+.balayage-leave {
+  &::before {
+    /* transform: scaleX(0) */
+    transform: translateX(-100%);
+  }
+  &::after {
+    /* transform: scaleX(0) */
+    transform: translateX(-100%);
+  }
+}
+
+.balayage-leave-active {
+  &::before,
+  &::after {
+    transition-duration: $t-duration;
+  }
+  &::before {
+    transition-delay: $t-delay;
+  }
+}
+
+.balayage-leave-to {
+  &::before {
+    /*transform: scaleX(1);*/
+    transform: translateX(-5%);
+  }
+  &::after {
+    /*transform: scaleX(1);*/
+    transform: translateX(0);
+  }
+}
+
+.balayage-enter {
+  &::before {
+    transform: translateX(-5%);
+  }
+  &::after {
+    transform: translateX(0);
+  }
+}
+
+.balayage-enter-active {
+  &::before,
+  &::after {
+    transition-duration: $t-duration;
+  }
+  &::after {
+    transition-delay: $t-delay;
+  }
+}
+
+.balayage-enter-to {
+  &::before {
+    transform: translateX(-100%);
+  }
+  &::after {
+    transform: translateX(-100%);
+  }
+}
+
+/* DIVERS */
+
+@keyframes underline_move {
+  from {
+    transform: translateX(-150px) scaleX(0);
+  }
+  to {
+    transform: translateX(-150px) scaleX(1);
+  }
+}
+
+@keyframes underline {
+  from {
+    right: 150%;
+  }
+  to {
+    right: 0;
+  }
+}
+
+@keyframes entrance {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleOut {
+  from {
+    transform: translateY(10rem) scale(1.5);
+  }
+  to {
+    transform: translateY(0rem) scale(1);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: translateY(-10rem) scale(0.3);
+  }
+  to {
+    transform: translateY(0rem) scale(1);
+  }
+}
