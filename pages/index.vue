@@ -4,8 +4,7 @@
       id="sectionHeader"
       class="section zone-header pt-5 justify-content-start flex-column"
     >
-      <animate-three v-if="$device.isDesktop"></animate-three>
-      <animate-bg v-else></animate-bg>
+      <animate-bg></animate-bg>
 
       <b-col
         class="align-self-center"
@@ -60,54 +59,52 @@
       </b-col>
     </b-row>
     <b-row id="sectionContact" class="section text-center">
-      <b-col>
+      <b-col offset-sm="3" sm="6">
         <h2>Nous contacter</h2>
         <b-row class="justify-content-center">
           <b-col lg="8">
             <p class="mx-auto mt-3 mb-3 text-white">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. corporis
-              totam illum ?
+              Vous avez une question ?<br />
+              Remplissez le formulaire
             </p>
           </b-col>
         </b-row>
 
-        <b-row class="justify-content-center">
-          <b-form-row class="justify-content-center">
-            <b-col class="mt-3" lg="6">
-              <b-form-input
-                id="input-2"
-                placeholder="Nom"
-                required
-                class="mr-sm-2 mb-sm-0"
-              ></b-form-input>
-            </b-col>
-            <b-col class="mt-3" lg="6">
-              <b-form-input
-                id="input-1"
-                type="email"
-                placeholder="Adresse email"
-                required
-                class="mr-sm-2 mb-sm-0"
-              ></b-form-input>
-            </b-col>
-            <b-col class="mt-3" lg="12">
-              <b-form-textarea
-                id="textarea"
-                trim
-                placeholder="Votre question..."
-              ></b-form-textarea>
-            </b-col>
-            <b-col class="mt-3">
-              <b-button
-                class="mt-3 mt-sm-0"
-                block
-                type="submit"
-                variant="outline-light"
-                >Envoyer</b-button
-              >
-            </b-col>
-          </b-form-row>
-        </b-row>
+        <b-form-row class="justify-content-center">
+          <b-col class="mt-3" lg="6">
+            <b-form-input
+              id="input-2"
+              placeholder="Nom"
+              required
+              class="mr-sm-2 mb-sm-0"
+            ></b-form-input>
+          </b-col>
+          <b-col class="mt-3" lg="6">
+            <b-form-input
+              id="input-1"
+              type="email"
+              placeholder="Adresse email"
+              required
+              class="mr-sm-2 mb-sm-0"
+            ></b-form-input>
+          </b-col>
+          <b-col class="mt-3" lg="12">
+            <b-form-textarea
+              id="textarea"
+              trim
+              placeholder="Votre question..."
+            ></b-form-textarea>
+          </b-col>
+          <b-col class="mt-3">
+            <b-button
+              class="mt-3 mt-sm-0"
+              block
+              type="submit"
+              variant="outline-light"
+              >Envoyer</b-button
+            >
+          </b-col>
+        </b-form-row>
       </b-col>
     </b-row>
   </div>
@@ -288,10 +285,10 @@ h2 {
   text-transform: uppercase;
 
   @include screen-md {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
   @include screen-xs {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 }
 

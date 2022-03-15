@@ -50,9 +50,9 @@ export default {
       // animation maisons
       gsap.fromTo(
         houses,
-        { x: 0 },
+        { backgroundPositionX: 0 },
         {
-          x: '-200px',
+          backgroundPositionX: '-200px',
           duration: 2.5,
           repeat: -1,
           ease: 'linear',
@@ -61,10 +61,10 @@ export default {
       // animation route
       gsap.fromTo(
         road,
-        { x: 0 },
+        { backgroundPositionX: 0 },
         {
-          x: '-80px',
-          duration: 0.5,
+          backgroundPositionX: '-80px',
+          duration: 0.3,
           repeat: -1,
           ease: 'linear',
         }
@@ -72,9 +72,9 @@ export default {
       // animation herbe
       gsap.fromTo(
         grass,
-        { x: 0 },
+        { backgroundPositionX: 0 },
         {
-          x: '-144px',
+          backgroundPositionX: '-393px',
           duration: 0.4,
           repeat: -1,
           ease: 'linear',
@@ -103,7 +103,13 @@ export default {
   bottom: 0;
   left: 0;
   overflow: hidden;
-  background-color: #2980b9;
+  background: rgb(35, 134, 199);
+  background: linear-gradient(
+    0deg,
+    rgba(35, 134, 199, 1) 19%,
+    rgba(44, 151, 221, 1) 57%,
+    rgba(8, 157, 255, 1) 92%
+  );
   .clouds {
     position: absolute;
     top: 0;
@@ -131,34 +137,38 @@ export default {
   }
 
   .houses {
-    bottom: 122px;
+    bottom: 75px;
     background-image: url(../static/img/bg_anime/house.png);
     height: 200px;
     z-index: 9;
   }
 
   .road {
-    bottom: 50px;
+    bottom: 0px;
     background-image: url(../static/img/bg_anime/road.svg);
     height: 80px;
   }
 
   .car {
-    bottom: 60px;
+    bottom: 5px;
     left: -110px;
     transform: translateX(-50%);
     background-image: url(../static/img/bg_anime/car.svg);
     background-size: cover;
     background-repeat: no-repeat;
-    width: 110px;
-    height: 110px;
+    width: 160px;
+    height: 160px;
     z-index: 10;
   }
 
   .grass {
-    bottom: 35px;
+    bottom: 0px;
     background-image: url(../static/img/bg_anime/grass.svg);
-    height: 125px;
+    background-size: contain;
+    height: 85px;
+    width: 100%;
+    z-index: 10;
+    background-position-y: 7px;
   }
 }
 

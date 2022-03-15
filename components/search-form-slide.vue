@@ -54,13 +54,13 @@
                   <b-button-group size="lg">
                     <b-button
                       type="button"
-                      variant="light"
+                      variant="warning"
                       @click="check_slide('slide-1', 'prev')"
                       >Etape Précédente</b-button
                     >
                     <b-button
                       type="button"
-                      variant="light"
+                      variant="warning"
                       :disabled="!list_options.vente_location.selected.value"
                       @click="check_slide('slide-1', 'next')"
                       >Etape suivante</b-button
@@ -92,13 +92,13 @@
                   <b-button-group size="lg">
                     <b-button
                       type="button"
-                      variant="light"
+                      variant="warning"
                       @click="check_slide('slide-2', 'prev')"
                       >Etape Précédente</b-button
                     >
                     <b-button
                       type="button"
-                      variant="light"
+                      variant="warning"
                       :disabled="!list_options.type_bien.selected.value"
                       @click="check_slide('slide-2', 'next')"
                       >Etape suivante</b-button
@@ -131,7 +131,7 @@
                   <b-button-group size="lg">
                     <b-button
                       type="button"
-                      variant="light"
+                      variant="warning"
                       @click="check_slide('slide-3', 'prev')"
                       >Etape Précédente</b-button
                     >
@@ -139,7 +139,7 @@
                       :disabled="!list_options.chambres.selected.value"
                       @click="search"
                       type="button"
-                      variant="success"
+                      variant="primary"
                     >
                       Lancer la recherche
                       <fa v-if="load_search" icon="circle-notch" spin />
@@ -226,7 +226,8 @@ export default {
       handler: function (val, oldVal) {
         let options = {}
         this.list_options.vente_location.selected.value
-          ? (options.vente_location = this.list_options.vente_location.selected.value)
+          ? (options.vente_location =
+              this.list_options.vente_location.selected.value)
           : ''
         this.list_options.type_bien.selected.value
           ? (options.type_bien = this.list_options.type_bien.selected.value)
@@ -399,6 +400,10 @@ export default {
       margin-top: 3em;
       .btn {
         font-size: 1rem;
+        font-weight: bold;
+        &:disabled {
+          opacity: 0.3;
+        }
       }
     }
   }

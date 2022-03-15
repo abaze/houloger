@@ -9,11 +9,11 @@
 /* INIT */
 body {
   font-family: $text_font;
-  font-size: 16px;
+  font-size: 20px;
   color: rgb(34, 34, 34);
 
   @include screen-md {
-    font-size: 12px;
+    font-size: 18px;
   }
 
   ul {
@@ -84,7 +84,7 @@ a {
     text-decoration: underline;
   }
 }
-$h1: 2.1rem;
+$h1: 2rem;
 /* Global aspect */
 body {
   :is(h1, h2, h3, h4, h5, h6) {
