@@ -209,7 +209,8 @@ export default {
 
         let options = {}
         this.list_options.vente_location.selected.value
-          ? (options.vente_location = this.list_options.vente_location.selected.value)
+          ? (options.vente_location =
+              this.list_options.vente_location.selected.value)
           : ''
         this.list_options.type_bien.selected.value
           ? (options.type_bien = this.list_options.type_bien.selected.value)
@@ -249,6 +250,8 @@ export default {
 <style lang="scss" scoped>
 @import '~/assets/scss/vars/_mixin.scss';
 .search-form {
+  position: relative;
+  z-index: 10;
   ul {
     position: relative;
     display: flex;
