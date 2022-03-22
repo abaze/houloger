@@ -219,7 +219,7 @@ body {
   }
 }
 .zone-header {
-  min-height: calc(100vh - 56px);
+  min-height: calc(90vh - 56px);
   opacity: 0;
   animation: 0.7s forwards entrance ease-in 1s;
   &:before {
