@@ -15,6 +15,7 @@ De cette manière, nous pouvons profiter de la partie CMS pour saisir toutes les
 
 Le Front est totalement indépendant du BACK, nous libérant ainsi des contraintes d'intégration liées au CMS.
 Il repose sur du NuxtJS et le framework CSS Boostrap-Vue.
+J'ai opté pour un hebergement sur Netlify.
 
 ![Exemple liste de biens](/static/img/screen/liste.jpg)
 
