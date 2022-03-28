@@ -1,30 +1,48 @@
 # houloger.com
 
-## Build Setup
+![Home Houloger.com](/static/img/screen/home.jpg)
+
+Plateforme de biens immobiliers, moteur de recherche avec liste et détail de chaque annonce.
+
+# Stack Technique
+
+## Backend
+
+Le Back se repose sur le CMS Wordpress. Ce dernier délivre les données au Front via une API native.
+De cette manière, nous pouvons profiter de la partie CMS pour saisir toutes les données relatives aux annonces immobilières.
+
+## Frontend
+
+Le Front est totalement indépendant du BACK, nous libérant ainsi des contraintes d'intégration liées au CMS.
+Il repose sur du NuxtJS et le framework CSS Boostrap-Vue.
+
+![Exemple liste de biens](/static/img/screen/liste.jpg)
+
+## Mise en route
 
 ```bash
-# install dependencies
+# installation des modules
 $ npm install
 
-# serve with hot reload at localhost:3000
+# rendu local
 $ npm run dev
 
-# build for production and launch server
+# build pour la prod et lancement du projet
 $ npm run build
 $ npm run start
 
-# generate static project
+# generation du projet en static
 $ npm run generate
 ```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+Pour plus d'informations [Nuxt.js docs](https://nuxtjs.org).
 
-## Modules supplementaires
+# Informations sur les modules supplementaires
 
 ### Axios - Gestion des requêtes HTTP etc.
 
 ```bash
-# install
+# ajout d'Axios dans Nuxt
 $ npm i @nuxtjs/axios
 
 # dans nuxt.config.js
@@ -49,7 +67,7 @@ styleRessources: {
 ### Icons Bootstrap Vue
 
 ```bash
-# pour activer les icons Bootstrap (dans nuxt.config.js)
+# j'active les icones Bootstrap dans nuxt.config.js
 modules: [
     [
       'bootstrap-vue/nuxt',
@@ -59,10 +77,11 @@ modules: [
     ],
     ...
   ],
-
-# example de config dans nuxt.config.js
-css: ['~/assets/global.scss', '~/assets/scss/animation.scss'],
-styleRessources: {
-   scss: ['./assets/scss/vars/*.scss'],
-},
 ```
+
+---
+
+<br>
+<br>
+
+## Vous pouvez utiliser la [démo en ligne](https://houloger.netlify.app/)
